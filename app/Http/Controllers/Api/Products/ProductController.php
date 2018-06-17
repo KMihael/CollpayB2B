@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\Contracts\Products\ProductRepository;
 use App\Http\Requests\Api\Products\StoreProductRequest;
+use App\Transformers\Products\ProductTransformer;
 
 class ProductController extends Controller
 {
