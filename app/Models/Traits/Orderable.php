@@ -2,7 +2,7 @@
 
 namespace App\Models\Traits;
 
-class Orderable
+trait Orderable
 {
     public function scopeLatestFirst($query)
     {
