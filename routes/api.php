@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::middleware('guest')->post('/register', 'Api\Auth\RegisterController@register');
+
+Route::group(['prefix' => 'products'], function () {
+    Route::post('/', 'Api\Products\ProductController@store')->middleware('auth:api');
+});
