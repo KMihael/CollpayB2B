@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Eloquent;
 
-// use App\Repositories\Exceptions\NoEntityDefined;
+use App\Repositories\Exceptions\NoEntityDefined;
 use App\Repositories\RepositoryInterface;
 // use App\Repositories\Criteria\CriteriaInterface;
 
@@ -18,7 +18,7 @@ abstract class EloquentRepositoryAbstract implements RepositoryInterface//, Crit
     protected function resolveEntity()
     {
         if (!method_exists($this, 'entity')) {
-            // throw new NoEntityDefined();
+            throw new NoEntityDefined();
         }
         return app()->make($this->entity());
     }
