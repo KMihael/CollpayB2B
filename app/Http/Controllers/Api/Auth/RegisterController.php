@@ -7,5 +7,8 @@ use App\Http\Controllers\Controller;
 
 class RegisterController extends Controller
 {
-    //
+    public function register(Request $request)
+    {
+        return 'REGISTER';
+    }
 }
