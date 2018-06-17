@@ -18,6 +18,6 @@ class ProductController extends Controller
 
     public function store(StoreProductRequest $request)
     {
-        # code...
+        return 'STORED';
     }
 }
