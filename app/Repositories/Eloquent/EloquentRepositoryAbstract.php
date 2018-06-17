@@ -15,6 +15,11 @@ abstract class EloquentRepositoryAbstract implements RepositoryInterface//, Crit
         $this->entity = $this->resolveEntity();
     }
 
+    public function store($data)
+    {
+        return $this->entity->create($data);
+    }
+
     protected function resolveEntity()
     {
         if (!method_exists($this, 'entity')) {

@@ -18,6 +18,11 @@ class ProductController extends Controller
 
     public function store(StoreProductRequest $request)
     {
-        return 'STORED';
+        $product = $this->products->store($request->all());
+
+        return fractal()
+            ->item($product)
+            ->transformWith(new ProductTransformer)
+            ->toArray();
     }
 }

@@ -9,4 +9,6 @@ use App\Models\Traits\Orderable;
 class Product extends Model
 {
     use Orderable;
+
+    protected $fillable = ['name'];
 }
